@@ -26,11 +26,20 @@ $(document).ready(function() {
     	$(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
     } else {
     	//description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
-        if ($(".project-description p").is(':visible')){
-            $(".project-description p").fadeOut();
+        //if ($(".project-description p").is(':visible')){
+        if( $(".project-description p").is(':visible')){
+            $(".project-description p").hide();
+        }else{
+            //$(this).closest(".project-description").fadeIn();
+            $(".project-description p").show();
+        
 
-        }
+        
+        
     }
+    description.remove();
+    
+}
     
  	
 
